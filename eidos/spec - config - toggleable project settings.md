@@ -31,6 +31,7 @@ status_reporting: true
 skills_list: true
 specs_and_concepts: true
 session_context: true
+context_tracking: true
 
 # nested project git (only when applicable)
 git_root: ../..
@@ -52,6 +53,7 @@ git_prefix: my-experiment
 | `skills_list` | `true` | bool | Skill listing (from frontmatter) in session start context |
 | `specs_and_concepts` | `true` | bool | Spec/concept listing, open comments, future items, recent spec changes |
 | `session_context` | `true` | bool | Session orientation: recent branches, todos, plans, last session, recent memory |
+| `context_tracking` | `true` | bool | Stop hook injects context window usage percentage after each AI message |
 | `git_root` | _(omitted)_ | string | Relative path to parent `.git` directory (nested projects only) |
 | `git_prefix` | _(omitted)_ | string | Branch name prefix (nested projects only) |
 
@@ -100,6 +102,7 @@ Skills that depend on optional behaviour should check config early:
 - [[spec - eidos - spec driven development loops]] — config is part of plugin structure
 - [[spec - session context - composable snippet based context injection]] — config gates feature snippets
 - [[spec - nested projects - sub-project isolation with shared git]] — adds string config entries for nested git
+- [[spec - context tracking - stop hook injects context usage for session awareness]] — adds `context_tracking` setting
 
 ## Mapping
 
