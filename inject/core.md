@@ -136,6 +136,7 @@ Common triggers:
 - "Add a todo" → `/eidos:todo`
 - "Let's brainstorm" → `/eidos:brainstorm`
 - "Challenge this" / "Is this a good idea?" → `/eidos:challenge`
+- "Is it safe to start a new session?" / "Anything left to do?" → `/eidos:compact`
 
 ## Plans
 
