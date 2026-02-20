@@ -1,0 +1,4 @@
+# Force LF line endings for shell scripts and hook configs
+# Required for bash execution and correct JSON parsing on all platforms
+*.sh text eol=lf
+hooks/**/*.json text eol=lf
