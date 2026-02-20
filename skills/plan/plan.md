@@ -52,11 +52,12 @@ Prefer phasing that surfaces visible, human-testable results early.
 If a phase can end with something the user can see or try, structure it that way — unless it would require a significant detour from the natural implementation order.
 This isn't a hard rule, but when the effort difference is small, early visibility wins.
 
-Present the draft for user review before creating the file.
-
 ### 4. Create Plan File
 
 Read the template: [[template - plan - structured phases with actions and progress tracking]]
+
+Create the file directly — don't present a draft first.
+The user sees the diff and can request changes.
 
 Create `memory/plan - <timestamp> - <claim>.md` following the template structure.
 Fill in:

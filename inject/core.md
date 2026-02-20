@@ -123,6 +123,9 @@ Don't fall back to built-in Claude Code behaviour or ad-hoc approaches when a sk
 Always announce the matched skill before invoking: "This looks like X — invoking `/eidos:X`."
 No need to ask for permission — just surface it clearly so the user can abort if needed.
 
+**Skip detection when the user explicitly invokes a skill** (e.g. `/eidos:spec`, `/eidos:plan`).
+The invocation IS the routing — don't match keywords on top of it.
+
 Common triggers:
 - "Plan this" → `/eidos:plan`
 - "Research this" → `/eidos:research`
@@ -131,6 +134,7 @@ Common triggers:
 - "We need to decide between…" → `/eidos:decision`
 - "I found issues while testing" → `/eidos:observe`
 - "Add a todo" → `/eidos:todo`
+- "Let's brainstorm" → `/eidos:brainstorm`
 
 ## Plans
 

@@ -53,27 +53,19 @@ Follow up as needed on:
 Don't ask everything at once — build understanding progressively.
 Skip questions the user already answered in their initial description.
 
-### 3. Draft the Spec
+### 3. Create Spec File
 
 Read the template: [[template - spec - sections and conventions for spec files]]
 
 Draft the spec from the Q&A.
 Only include sections that have substance — don't add empty sections.
 
-Present the full draft for review before writing.
-
-### 4. Revise
-
-If the user wants changes, adjust and re-present.
-This may trigger further questions — that's fine, iterate until it's right.
-
-### 5. Create Spec File
-
-Write to `eidos/spec - <name> - <claim>.md`.
+Write directly to `eidos/spec - <name> - <claim>.md`.
 If it's a skill spec, write to `eidos/skills/spec - <name> - <claim>.md`.
+Don't present a draft first — the user sees the diff and can request changes.
 Commit immediately.
 
-### 6. Offer Next Steps
+### 4. Offer Next Steps
 
 ```
 Spec created: [[spec - <name> - <claim>]]

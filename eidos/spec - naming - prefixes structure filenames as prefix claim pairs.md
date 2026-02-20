@@ -104,7 +104,7 @@ Compact timestamp format: `yymmddhhmm` (10 digits, no separators)
 - Sorts chronologically in file browsers
 - Shorter than `yyyy-mm-dd-hhmm` while remaining unambiguous
 
-Procedural prefixes (timestamped): refinement, drift, coherence, decision, plan, goal, research, observation, review, todo, solved, architecture, bug, incoherence, learning, proposal, next, session, summary, pull, meta, goodjob
+Procedural prefixes (timestamped): refinement, drift, coherence, decision, plan, goal, research, brainstorm, observation, review, todo, solved, architecture, bug, incoherence, learning, proposal, next, session, summary, pull, meta, goodjob
 
 Non-timestamped prefixes (in `memory/`): idea, problem, question
 
