@@ -137,6 +137,7 @@ Common triggers:
 - "Let's brainstorm" → `/eidos:brainstorm`
 - "Challenge this" / "Is this a good idea?" → `/eidos:challenge`
 - "Is it safe to start a new session?" / "Anything left to do?" → `/eidos:compact`
+- "Where are we?" / "What's the status?" / "How far along are we?" → `/eidos:status`
 
 ## Plans
 
@@ -179,3 +180,4 @@ Each skill lives in `skills/<name>/` with a descriptive main file (e.g. `weave.m
 `SKILL.md` is a symlink to the main file — it exists solely for Claude Code discovery.
 The main file carries the proper name; `SKILL.md` is plumbing.
 When creating a new skill: `ln -s <name>.md SKILL.md`.
+Every skill gets a spec in `eidos/skills/spec - <name> skill - <claim>.md` — the skill file is the instructions, the spec is the intent and design rationale.

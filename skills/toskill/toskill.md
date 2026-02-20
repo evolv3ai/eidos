@@ -24,10 +24,10 @@ Turn a discovered pattern into a reusable skill.
    - Instructions section
    - Output section
 4. Create `skills/<name>/SKILL.md` symlink → `<name>.md`
-5. Ask if a spec should also be created in `eidos/skills/`
+5. Create spec in `eidos/skills/spec - <name> skill - <claim>.md` (every skill gets a spec)
 6. Commit all files
 
 ## Output
 
 - Creates: `skills/<name>/<name>.md` + SKILL.md symlink
-- Optionally creates: `eidos/skills/spec - <name> - <claim>.md`
+- Creates: `eidos/skills/spec - <name> skill - <claim>.md`
