@@ -135,6 +135,7 @@ Common triggers:
 - "I found issues while testing" → `/eidos:observe`
 - "Add a todo" → `/eidos:todo`
 - "Let's brainstorm" → `/eidos:brainstorm`
+- "Challenge this" / "Is this a good idea?" → `/eidos:challenge`
 
 ## Plans
 
