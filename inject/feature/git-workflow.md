@@ -13,6 +13,7 @@ Your help is much appreciated, and you are an amazing enabler, but the git histo
   - If `git_prefix` is configured in `.eidos-config.yaml`, use `<prefix>/task/<description>` instead
   - Git commands work naturally from subdirectories — no special handling needed for nested projects
 - **Commit per action:** one logical unit of work per commit, commit immediately, don't wait for approval
+  - **No Co-Author tags** — never add `Co-Authored-By` or similar AI attribution to commit messages
 - **`--no-ff` merges:** preserves branch structure in history
 - **Never delete branches** after merging — branch references are history
 - **New work in existing branch:** if work diverges from the branch purpose, ask whether to merge first and create a new branch — don't silently continue

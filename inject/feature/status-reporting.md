@@ -24,3 +24,7 @@ After the status report, preview the next step:
 **Next:** [brief description]
 continue?
 ```
+
+**IMPORTANT: Phase boundaries are mandatory checkpoints.**
+After completing the last action of a plan phase, give the status report and **wait for explicit user confirmation** before starting the next phase.
+Never continue into the next phase without go-ahead.

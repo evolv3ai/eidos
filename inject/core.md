@@ -112,6 +112,8 @@ See [[spec - numbered lists - structured selectable output]].
 Files follow `prefix - claim.md` with prose claims.
 Procedural files in `memory/` use compact timestamps: `prefix - yymmddhhmm - claim.md`.
 When a `todo` is completed, rename to `solved` with updated timestamp: `git mv "memory/todo - ..." "memory/solved - yymmddhhmm - claim.md"` and update any wiki links.
+**Always run `date '+%y%m%d%H%M'` to get the actual current time before creating any timestamped filename.**
+Never guess or infer the time from conversation context — it's frequently wrong.
 See [[spec - naming - prefixes structure filenames as prefix claim pairs]].
 
 ## Skill Routing
