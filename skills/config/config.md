@@ -44,6 +44,7 @@ Eidos config (.eidos-config.yaml):
   specs_and_concepts: true        # spec/concept listing, future items at session start
   session_context: true           # session orientation: branches, todos, plans, recent memory
   context_tracking_max: 200000    # max tokens for context tracking (null to disable)
+  mono_focus: true                # mono focus injection at session start
 
 Change which? (e.g., "git_workflow", "context_tracking_max 100000")
 ```
@@ -60,6 +61,7 @@ If a specific key was provided as argument, show only that setting and its descr
 | `specs_and_concepts` | `true` | bool | Spec/concept listing, open comments, future items at session start |
 | `session_context` | `true` | bool | Session orientation: branches, todos, plans, recent memory |
 | `context_tracking_max` | `200000` | int/null | Max tokens for context tracking; `null` to disable |
+| `mono_focus` | `true` | bool | Mono focus injection at session start (reads external mapping) |
 | `git_root` | _(omitted)_ | string | Relative path to parent `.git` directory (for nested projects) |
 | `git_prefix` | _(omitted)_ | string | Branch name prefix (for nested projects) |
 
