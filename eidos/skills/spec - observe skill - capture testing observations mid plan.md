@@ -48,3 +48,4 @@ The threshold: if it needs its own implementation task, it's a structured observ
 - [[spec - planning - structured intent between spec and code]] — observations are part of the plan lifecycle
 - [[template - plan - structured phases with actions and progress tracking]] — defines the per-phase Observations sub-section
 - [[spec - plan-continue skill - resume work on existing plan]] — picks up observation-generated tasks normally
+- [[spec - experiment skill - log based iterative exploration with emergent phases]] — experiments use the same observation format (P1-O1, Was/Expected) inline per phase; this skill targets plans but the format is shared

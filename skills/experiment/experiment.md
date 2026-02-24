@@ -100,7 +100,7 @@ Search `memory/` for `experiment - *.md` files with status not `completed` or `a
 
 Read the experiment file thoroughly.
 Determine:
-- Which phase is current (last phase without `status: done` or `status: abandoned`)
+- Which phase is current (last phase without `status: completed` or `status: abandoned`)
 - Whether there are open steps without outcomes
 - Whether the last outcome suggests a direction
 - Current invariants list
@@ -164,6 +164,7 @@ Write the step to the experiment file as work progresses:
 **Outcome:** [what happened]
 - => [inline observations]
 - => invariant: [promoted to Invariants section]
+- => {[!] concrete follow-up task} or {[?] idea to explore later}
 ```
 
 Steps can contain checkbox tasks for concrete sub-actions:
@@ -174,6 +175,24 @@ Steps can contain checkbox tasks for concrete sub-actions:
 - [ ] Tested on mobile viewport
 ```
 
+Steps can contain an **Analysis** sub-section for diagnostic or investigative steps where the "try" is instrumenting, logging, or reasoning rather than changing behaviour:
+```markdown
+### Step N.M
+
+**Intent:** Identify what causes the layout jump at depth transitions.
+
+**Analysis:**
+Three discrete jump sources identified:
+- Source 1: integer depth transition ...
+- Source 2: arc-based path flipping ...
+
+**Try:**
+- [x] Added diagnostic logging
+- [x] Traced the discontinuity to winnerMask
+
+**Outcome:** Root cause confirmed — the winnerMask creates a binary decision.
+```
+
 #### Phase Transitions
 
 A new phase starts when:
@@ -182,9 +201,27 @@ A new phase starts when:
 
 When closing a phase:
 1. Write the **Phase takeaway** — what shifted in understanding
-2. Update phase status to `done`
+2. Update phase status to `completed`
 3. Promote any discovered invariants to the top-level Invariants section
 4. Commit the experiment file
+
+#### Observations (User Testing Feedback)
+
+When the user reports testing observations during an experiment, structure them inline in the current phase — after the step that produced the testable state.
+Use the same format as plan observations:
+
+```markdown
+#### Observations (from YYMMDDHHMM user testing)
+
+##### PN-O1 — Short description — STATUS
+
+**Was:** what happened
+**Expected:** what should happen
+```
+
+- Numbered per-phase: P1-O1, P2-O1, etc.
+- Status: unmarked (open), `FIXED`, `ACCEPTED`, `DEFERRED`
+- Observations can spawn new steps within the current phase or `{[!]}` items for later
 
 When starting a new phase:
 1. Review the invariants list — these are the "don't break this" contract
@@ -209,6 +246,17 @@ Format in the top-level section:
 
 Before starting each new phase, surface the invariants list as a reminder.
 
+#### Follow-ups
+
+Follow-up work that emerges during an experiment uses the standard eidos inline markers:
+- `{[!] description}` — planned, will be done
+- `{[?] description}` — aspirational, worth investigating
+
+These live inline in step outcomes or phase takeaways — no separate section needed.
+`/eidos:next` and `future_items.py` pick them up automatically.
+
+When ending the experiment, scan for any `{[!]}` / `{[?]}` items and surface them.
+
 #### Ending an Experiment
 
 An experiment ends when:
@@ -220,20 +268,33 @@ To end:
 1. Fill the **Resolution** section — what happened, artifacts produced, learnings, specs to extract
 2. Update frontmatter `status` to `completed` or `abandoned`
 3. Commit the experiment file
-4. Offer next steps:
+4. Scan for `{[!]}` / `{[?]}` items and surface them
+5. Offer next steps:
 
 ```
 Experiment completed: [[experiment - <timestamp> - <claim>]]
 
+Open items:
+- {[!] ...} (N planned)
+- {[?] ...} (N aspirational)
+
 Options:
 1 - Extract specs with /eidos:toeidos
 2 - Create a plan from learnings with /eidos:plan
-3 - Done
+3 - Act on open items
+4 - Done
 ```
 
 #### Commits and Status Reporting
 
-- Commit the experiment file after each meaningful step (outcome recorded)
+The experiment file MUST be updated as part of every step's commit cycle.
+This is not optional cleanup — it's part of the step itself.
+
+After each step:
+```
+implement → commit code → update experiment file (outcome) → commit experiment → continue
+```
+
 - After each step, report per the standard pattern (branch, recent commits, summary)
 - Preview the next step or ask for direction
 

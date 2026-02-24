@@ -48,7 +48,7 @@ Experiments are about doing and observing.
 
 - Phases are logical groupings that share a direction or focus
 - Named when the direction becomes clear — can be backfilled
-- Each phase has a status: `open`, `done`, `abandoned`
+- Each phase has a status: `open`, `active`, `paused`, `completed`, `abandoned` (mirrors plan statuses)
 - A new phase starts when:
   - The direction or focus shifts (suggested by AI)
   - The user explicitly says "new phase"
@@ -65,6 +65,9 @@ Steps within a phase record individual iterations:
 Steps can also contain:
 - Checkbox tasks (`[ ]`, `[x]`) for concrete actions within a step
 - `=>` notes for inline observations that emerge during work
+- `=> invariant:` markers that promote to the Invariants section
+- `=> {[!]}` / `=> {[?]}` inline markers for follow-up work — arrow prefix because they're output context (picked up by `/eidos:next`)
+- An **Analysis** sub-section for diagnostic/investigative steps (logging, tracing, reasoning about root causes)
 - Links to created files or artifacts
 
 ### Invariants
@@ -74,6 +77,20 @@ Steps can also contain:
 - Each invariant has a brief description and nested bullets for notes and origin phase
 - Checked before starting a new phase — the invariant list is the "don't break this" contract
 - Can also be specified upfront if known constraints exist before experimenting
+
+### Observations (User Testing Feedback)
+
+When the user reports testing observations, they are structured inline in the current phase after the step that produced the testable state.
+Same format as plan observations: numbered per-phase (P1-O1, P2-O1), Was/Expected, status markers (FIXED, ACCEPTED, DEFERRED).
+Observations can spawn new steps or `=> {[!]}` items for later.
+
+### Follow-ups
+
+Work items that emerge during the experiment but are out of scope for the current exploration.
+Use standard eidos inline markers with the `=>` prefix (they're output context): `=> {[!] description}` (planned) and `=> {[?] description}` (aspirational).
+These live inline in step outcomes or phase takeaways — not in a separate file section.
+`/eidos:next` and `future_items.py` pick them up automatically.
+Surfaced at experiment end so nothing gets buried in step logs.
 
 ### Resolution
 
@@ -89,7 +106,7 @@ Mirrors plan statuses: `open`, `active`, `paused`, `completed`, `abandoned`.
 
 - Usually its own branch: `task/experiment-<name>`
 - Can run on an existing branch when the experiment is part of larger work (e.g., during a plan)
-- Commit per meaningful step, not per sub-task
+- Commit cycle per step: `implement → commit code → update experiment file (outcome) → commit experiment → continue`
 
 ### Status Reporting
 
@@ -136,13 +153,27 @@ status: active
 ### Step 1.2
 
 **Intent:** ...
+
+**Analysis:** [optional — for diagnostic/investigative steps]
+
 **Try:** ...
 **Outcome:** ...
 - => observation that emerged
 - => [[spec - ...]] updated
 - => invariant: [description — promoted to Invariants section]
+- => {[!] concrete follow-up task}
+- => {[?] idea to explore later}
 
-**Phase takeaway:** what shifted in our understanding
+#### Observations (from YYMMDDHHMM user testing)
+
+##### P1-O1 — Short description — STATUS
+
+**Was:** what happened
+**Expected:** what should happen
+
+### Phase takeaway
+
+What shifted in our understanding.
 
 ## Phase 2: ...
 ```
@@ -160,6 +191,7 @@ status: active
 - Depends on [[spec - naming - prefixes structure filenames as prefix claim pairs]] (file naming)
 - Relates to [[spec - planning - structured intent between spec and code]] (the experiment is what you do when a plan is premature)
 - Relates to [[spec - externalise - persist insights beyond the conversation]] (the log externalises iterative learning)
+- Implements [[c - actions carry input and output context - plain bullets before arrow bullets after]] (steps have input/output sub-bullets)
 
 ## Mapping
 

@@ -23,23 +23,23 @@ Externalising means writing them to files so future sessions can build on past w
 |---------|-------------|
 | Workflow/behaviour changes | Inject snippet, relevant spec, or CLAUDE.md |
 | Conventions discovered | Relevant spec or new spec in `eidos/` |
-| Decisions made | Inline in plan with `=>`, or `memory/decision - ...` for significant ones |
+| Decisions made | Inline in plan/experiment with `=>`, or `memory/decision - ...` for significant ones |
 | Reusable patterns | New skill in `skills/` |
-| Learnings during work | Inline in plan with `=>`, promote to files when significant |
+| Learnings during work | Inline in plan/experiment with `=>`, promote to files when significant |
 | Questions to explore | `memory/question - ...` or `{[?]}` in relevant spec |
 | Ideas for later | `{[?]}` in relevant spec or `memory/idea - ...` |
 
 ### When to Externalise
 
 - **During work** — when you establish a pattern or make a decision
-- **After completing an action** — observations go inline in the plan with `=>`
+- **After completing an action** — observations go inline in the plan or experiment with `=>`
 - **At session end** — use `/eidos:done` to export and reflect
 - **When corrected** — update specs or CLAUDE.md so the correction persists
 
 ## Design
 
 Externalisation is not a separate activity — it's woven into the workflow.
-Plan `=>` notes are the lightest form.
+Plan and experiment `=>` notes are the lightest form.
 Spec updates are the heaviest.
 The right weight depends on how broadly the insight applies.
 
@@ -47,10 +47,12 @@ The right weight depends on how broadly the insight applies.
 
 - Decisions and learnings from work sessions are findable in files, not just in chat history
 - Corrections to behaviour persist across sessions
-- Plan files capture inline observations via `=>`
+- Plan and experiment files capture inline observations via `=>`
 
 ## Interactions
 
 - [[spec - eidos - spec driven development loops]] — externalisation feeds both `eidos/` and `memory/`
 - [[spec - plan skill - structured plan for multi step work]] — `=>` notes are the primary inline externalisation mechanism
+- [[spec - experiment skill - log based iterative exploration with emergent phases]] — experiments also use `=>` for inline externalisation
+- [[c - actions carry input and output context - plain bullets before arrow bullets after]] — the input/output principle behind `=>`
 - [[spec - naming - prefixes structure filenames as prefix claim pairs]] — prefixes for externalised file types
