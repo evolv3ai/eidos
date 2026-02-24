@@ -39,7 +39,7 @@ Focus on:
 
 **Always run `date '+%y%m%d%H%M'` to get the actual current time.**
 
-Create `memory/experiment - <timestamp> - <claim>.md`:
+Create `memory/experiment - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `experiment - 2602141030 - iterating on drag feel.md`):
 
 ```markdown
 ---

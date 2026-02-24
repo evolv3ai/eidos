@@ -47,10 +47,11 @@ Which items to externalise? (e.g., "1.1, 2.1, 3.1")
 
 ### 4. Create Files
 
-For each selected item, create the appropriate file:
-- `memory/learning - <claim>.md`
-- `memory/todo - <timestamp> - <claim>.md`
-- `memory/incoherence - <claim>.md`
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+For each selected item, create the appropriate file (per [[spec - naming - prefixes structure filenames as prefix claim pairs]]):
+- `memory/learning - <timestamp> - <claim>.md` (e.g. `learning - 2602101500 - rate limiting belongs in middleware.md`)
+- `memory/todo - <timestamp> - <claim>.md` (e.g. `todo - 2602101400 - audit error handling consistency.md`)
+- `memory/incoherence - <timestamp> - <claim>.md` (e.g. `incoherence - 2602101500 - auth spec contradicts session spec.md`)
 - `memory/question - <claim>.md`
 
 Commit all created files together.
@@ -67,4 +68,4 @@ Add `=>` wiki links in the numbered list snapshot to track what was created:
 ## Output
 
 - Creates: files with appropriate prefixes in `memory/`
-- Creates: `memory/reflect - <timestamp> - <claim>.md` (the snapshot)
+- Creates: `memory/reflect - <timestamp> - <claim>.md` (e.g. `reflect - 2602141030 - session learnings snapshot.md`)

@@ -55,7 +55,8 @@ Look for:
 
 ### 4. Create Review File
 
-Create `memory/codereview - <timestamp> - <claim>.md`:
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+Create `memory/codereview - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `codereview - 2602141030 - 2 critical issues in auth module.md`):
 
 ```markdown
 ---

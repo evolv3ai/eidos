@@ -61,7 +61,8 @@ Same as `/eidos:next` but summarised, not interactive:
 
 ### 5. Compose the Pickmeup
 
-Create `memory/pickmeup - <timestamp> - <claim>.md` with this structure:
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+Create `memory/pickmeup - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `pickmeup - 2602141030 - last 3 days activity.md`) with this structure:
 
 ```markdown
 ---

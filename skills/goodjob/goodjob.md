@@ -62,7 +62,7 @@ status: unprocessed
 ### 3. Present and Write
 
 Show the draft to the user.
-If approved, write to `memory/goodjob - <timestamp> - <claim>.md`.
+If approved, run `date '+%y%m%d%H%M'` to get the current timestamp and write to `memory/goodjob - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `goodjob - 2602141030 - well chosen auth framing.md`).
 Commit.
 
 ## Processing

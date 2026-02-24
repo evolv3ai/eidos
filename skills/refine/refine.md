@@ -64,7 +64,8 @@ Answers can be:
 
 ### 4. Create Refinement Trace
 
-Create `memory/refinement - <timestamp> - <claim>.md` capturing both sides of the dialogue near-verbatim.
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+Create `memory/refinement - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `refinement - 2602101418 - refine loop spec comment processing.md`) capturing both sides of the dialogue near-verbatim.
 Don't condense the AI's presentation — the user's answer only makes sense in the context of what was asked and explained.
 
 ```markdown

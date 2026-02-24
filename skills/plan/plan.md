@@ -59,9 +59,10 @@ Read the template: [[template - plan - structured phases with actions and progre
 Create the file directly — don't present a draft first.
 The user sees the diff and can request changes.
 
-Create `memory/plan - <timestamp> - <claim>.md` following the template structure.
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+Create `memory/plan - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `plan - 2602101614 - migrate to new auth system.md`) following the template structure.
 Fill in:
-- Frontmatter with current timestamp
+- Frontmatter
 - Context with links to related specs/goals
 - Phases with drafted actions
 - Verification criteria

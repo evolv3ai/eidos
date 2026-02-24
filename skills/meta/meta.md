@@ -70,7 +70,8 @@ Follow up on responses, go deeper where the human engages, drop threads they ski
 
 ### 4. Create Meta Trace
 
-When the dialogue reaches natural conclusions, create `memory/meta - <timestamp> - <claim>.md`:
+When the dialogue reaches natural conclusions, run `date '+%y%m%d%H%M'` to get the current timestamp.
+Create `memory/meta - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `meta - 2602141030 - pull output abstraction level.md`):
 
 ```markdown
 ---

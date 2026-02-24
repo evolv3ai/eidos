@@ -17,7 +17,8 @@ Summarise a file or session.
 
 1. Read the target file
 2. Extract: key points, decisions made, artifacts created, open questions
-3. Create `memory/summary - <timestamp> - <claim>.md`:
+3. Run `date '+%y%m%d%H%M'` to get the current timestamp.
+4. Create `memory/summary - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `summary - 2602141030 - auth module overview.md`):
 
 ```markdown
 ---
@@ -44,7 +45,6 @@ category: utility
 - [Unresolved items]
 ```
 
-4. Commit immediately
 
 ## Output
 
