@@ -204,7 +204,7 @@ The following GID symbols are currently used in eidos:
 | `[!]` | `{[!] ...}` | Planned — will be implemented | Spec markers, anywhere in file |
 | `[?]` | `{[?] ...}` | Aspirational — worth investigating | Spec markers, anywhere in file |
 | `>>` | `{>> ...}` | Technical hint for implementers | Design/Behaviour sections |
-| `=>` | `=>` (bare) | Inline outcome that emerged during execution | Plans, action lists |
+| `=>` | `=>` (bare) | Inline outcome that emerged during execution | Plans, experiments, action lists |
 | `[p]` | `[p]` (bare) | Postponed — intentionally deferred action | Plans, action lists |
 | `{{ }}` | `{{...}}` | Inline refinement comment — human (temporary) | Spec files |
 | `{{ }}` | `{{AI ...}}` | Inline annotation — AI (temporary) | Spec files, via `/eidos:annotate` |

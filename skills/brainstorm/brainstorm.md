@@ -38,7 +38,8 @@ Note relevant context — it seeds better ideas.
 
 Read the template: [[template - brainstorm - structured ideation around a topic]]
 
-Create `memory/brainstorm - <timestamp> - <claim>.md` with the Seed filled in.
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+Create `memory/brainstorm - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `brainstorm - 2602101400 - alternative auth approaches.md`) with the Seed filled in.
 Commit immediately.
 
 ### 4. Generate Ideas

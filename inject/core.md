@@ -138,6 +138,8 @@ Common triggers:
 - "Challenge this" / "Is this a good idea?" → `/eidos:challenge`
 - "Is it safe to start a new session?" / "Anything left to do?" → `/eidos:compact`
 - "Where are we?" / "What's the status?" / "How far along are we?" → `/eidos:status`
+- "I'm working in subdir" / "Set mono focus" / "Which subdir am I in?" → `/eidos:mono`
+- "Let me try some things" / "Let's experiment with…" / "I want to iterate on…" → `/eidos:experiment`
 
 ## Plans
 

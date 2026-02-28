@@ -54,6 +54,20 @@ if [ -f "$PLUGIN_ROOT/inject/core.md" ]; then
     output+="$(cat "$PLUGIN_ROOT/inject/core.md")\n\n"
 fi
 
+# --- Mono focus (config-gated, reads external mapping) ---
+if [ "$(bash "$READ_CONFIG" "mono_focus" "true")" = "true" ]; then
+    MONO_READ="$PLUGIN_ROOT/scripts/mono_read.sh"
+    repo_root=$(git rev-parse --show-toplevel 2>/dev/null || pwd)
+    mono_subpath=$(bash "$MONO_READ" "$repo_root" 2>/dev/null || true)
+    if [ -n "$mono_subpath" ]; then
+        output+="## Mono Focus\n\n"
+        output+="**IMPORTANT:** You are in repo \`$repo_root\` but the user is currently working in \`$repo_root/$mono_subpath\`.\n"
+        output+="Prefer file operations, commands, and navigation relative to \`$mono_subpath\`.\n\n"
+        output+="**Say this at the very start of your first response (before anything else):**\n\n"
+        output+="> Mono focus: **$mono_subpath** (\`$repo_root/$mono_subpath\`)\n\n"
+    fi
+fi
+
 # --- Feature snippets (config-gated) ---
 if [ -d "$PLUGIN_ROOT/inject/feature" ]; then
     for snippet in "$PLUGIN_ROOT/inject/feature/"*.md; do

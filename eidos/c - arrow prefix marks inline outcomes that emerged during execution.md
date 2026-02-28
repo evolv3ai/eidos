@@ -12,14 +12,18 @@ planned action
   - => observation that emerged
   - => [[file that was created]]
   - => decision that was made
+  - => {[!] follow-up discovered}
 ```
 
 This makes it easy to distinguish what was planned from what emerged.
+See [[c - actions carry input and output context - plain bullets before arrow bullets after]] for the broader principle.
 
 Used in:
 - Plan actions — track observations and created files during implementation
+- Experiment steps — outcomes, invariants, and follow-ups discovered during work
 - Numbered list items — track what was done about each selected item
 - Any structured list where actions produce traceable outcomes
 
 The `=>` is the lightest form of externalisation — it captures what happened without requiring a separate file.
 When an outcome is significant enough, it graduates to its own file (decision, spec, claim) and the `=>` line becomes a wiki link to it.
+When a follow-up needs tracking, `=> {[!] ...}` or `=> {[?] ...}` makes it discoverable by `/eidos:next`.

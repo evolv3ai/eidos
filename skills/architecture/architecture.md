@@ -58,7 +58,8 @@ For scoped queries, document only what's relevant to the scope.
 
 ### 3. Create Architecture File
 
-Create `memory/architecture - <timestamp> - <claim>.md`:
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+Create `memory/architecture - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `architecture - 2602141030 - full codebase snapshot.md`):
 
 ```markdown
 ---

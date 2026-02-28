@@ -54,11 +54,10 @@ Scan all `[[wiki links]]` in `eidos/`:
 
 ### 4. Create Suggestion File
 
-Write findings to `memory/` before acting:
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+Write findings to `memory/` before acting (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `weave - 2602141030 - suggested links.md`):
 - Weave mode: `memory/weave - <timestamp> - suggested links.md`
 - Prune mode: `memory/weave - <timestamp> - prune suggestions.md`
-
-Use compact timestamp format (`yymmddhhmm`).
 
 Format the file using [[spec - numbered lists - structured selectable output]]:
 

@@ -71,7 +71,8 @@ For conflicts the user defers:
 
 ### 6. Report
 
-Create `memory/sync - <timestamp> - <claim>.md` summarising:
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+Create `memory/sync - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `sync - 2602141030 - reconciled auth specs and code.md`) summarising:
 - What was synced
 - Which direction each item was resolved
 - What remains unresolved

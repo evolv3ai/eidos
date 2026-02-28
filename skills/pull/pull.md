@@ -72,7 +72,8 @@ If a matching spec exists, note it — this becomes an update, not a creation.
 Read each target file thoroughly.
 The goal is to distil what matters — many files may only have a small percentage of relevant code for targeted spec requests (e.g. some behaviour or feature we want to spec may have a footprint in many files in the implementation).
 
-Write the collected material to `memory/pull - <timestamp> - <claim>.md` using [[template - pull - collected code material with intent sketch]].
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+Write the collected material to `memory/pull - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `pull - 2602101418 - extracted spec from auth module.md`) using [[template - pull - collected code material with intent sketch]].
 Only skip the pull file for very simple pulls (one or two focused files, narrow scope) — when in doubt, create the file.
 
 Organise by logical concern, not per-file — one concern often spans multiple files.
@@ -96,11 +97,12 @@ Climbing guidelines for the spec draft:
   ```
 - Pure mechanism (specific API calls, internal variable names) does not belong in the spec
 
-### 6. Draft the Spec
+### 6. Write or Propose the Spec
 
 #### New Spec (no existing spec found)
 
-Create a draft following the spec template from [[spec - eidos - spec driven development loops]]:
+Write the spec file directly to `eidos/` following the spec template from [[spec - eidos - spec driven development loops]].
+The user sees the diff and can request adjustments — no confirmation gate needed for new files.
 
 ```markdown
 ---
@@ -128,28 +130,14 @@ category: core
 
 #### Existing Spec Update
 
+Do not modify the spec yet.
 Show a diff-style comparison:
 - What the spec currently says vs what the code implies
 - New claims the code introduces
 - Claims the code no longer upholds
 - Mapping additions needed
 
-### 7. Present for Decision
-
-#### New Spec
-
-```
-Pull complete. Draft spec for [target]:
-
-[show draft]
-
-Options:
-1 - Create spec as shown
-2 - Adjust before creating
-3 - Discard
-```
-
-#### Existing Spec Update
+Then present for decision per [[c - agency in implementation not direction - surface reasoning for human steering]]:
 
 ```
 Pull found differences between code and spec:
@@ -163,13 +151,7 @@ Options:
 4 - Discard
 ```
 
-Per [[c - agency in implementation not direction - surface reasoning for human steering]], never auto-update — present reasoning and let the human decide.
-
-### 8. Execute
-
-If approved:
-- Write the new spec file to `eidos/` or update the existing one
-- Commit
+If approved, apply the changes to the spec and commit.
 
 ## Output
 

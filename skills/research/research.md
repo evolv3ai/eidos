@@ -28,7 +28,8 @@ If the question is already specific, confirm and proceed.
 
 Read the template: [[template - research - source notes and distilled findings]]
 
-Create `memory/research - <timestamp> - <claim>.md` with the Question filled in and empty Sources/Distillation/Implications sections.
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+Create `memory/research - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `research - 2602101400 - comparing auth token strategies.md`) with the Question filled in and empty Sources/Distillation/Implications sections.
 Commit immediately.
 
 This file is the working document — it gets updated as research progresses, not written once at the end.

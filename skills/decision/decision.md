@@ -52,7 +52,8 @@ What changes as a result:
 
 Read the template: [[template - decision - options rationale and outcome]]
 
-Create `memory/decision - <timestamp> - <claim>.md` following the template.
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+Create `memory/decision - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `decision - 2602101400 - chose CSG over mesh booleans.md`) following the template.
 Commit immediately.
 
 ### 6. Link to Context

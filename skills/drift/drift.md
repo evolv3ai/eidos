@@ -63,7 +63,8 @@ For each target file with a matching spec:
 
 ### 4. Compile Report
 
-Create `memory/drift - <timestamp> - <claim>.md`:
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+Create `memory/drift - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `drift - 2602101500 - building system divergence.md`):
 
 ```markdown
 ---

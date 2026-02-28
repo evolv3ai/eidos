@@ -34,7 +34,8 @@ For each target spec, read thoroughly:
 ### 3. Collect Spec Changes
 
 Compare what the spec says against the current code state.
-Produce a **push doc** — `memory/push - <timestamp> - <claim>.md` — that lists:
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+Produce a **push doc** — `memory/push - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `push - 2602101500 - implement auth spec claims.md`) — that lists:
 
 - Each claim or design element that needs implementation or updating
 - The current code state for each (exists/missing/diverged)

@@ -59,7 +59,8 @@ Suggest these as additions to CLAUDE.md.
 
 ### 6. Compile Report
 
-Create `memory/coherence - <timestamp> - <claim>.md`:
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+Create `memory/coherence - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `coherence - 2602101500 - spec graph contradictions.md`):
 
 ```markdown
 ---

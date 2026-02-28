@@ -74,7 +74,8 @@ Which items to work on?
 
 ### 4. Create Snapshot
 
-Create `memory/next - <timestamp> - <claim>.md` with the aggregated list.
+Run `date '+%y%m%d%H%M'` to get the current timestamp.
+Create `memory/next - <timestamp> - <claim>.md` (per [[spec - naming - prefixes structure filenames as prefix claim pairs]], e.g. `next - 2602141030 - aggregated actionable items.md`) with the aggregated list.
 Commit.
 
 ### 5. Act on Selection

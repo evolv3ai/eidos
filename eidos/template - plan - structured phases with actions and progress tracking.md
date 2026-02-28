@@ -80,7 +80,7 @@ Notes added during or after implementation use `=>` prefix to mark them as obser
    - => found existing rate limiter in utils/rateLimit.ts
 ```
 
-The `=>` makes it easy to see what was planned vs what emerged.
+The `=>` makes it easy to see what was planned vs what emerged — see [[c - actions carry input and output context - plain bullets before arrow bullets after]].
 Created files are tracked inline with `=>` rather than in a separate section.
 
 **Observations:**
